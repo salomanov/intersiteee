@@ -198,12 +198,16 @@ body {
   content: "";
   position: absolute;
   display: block;
-  width: 100%;
+  width: 0;
   height: 0.25rem;
   background: #000000;
   border-radius: 0.125rem;
   top: 0;
   left: 0;
+  transition: width 1s ease-in-out;
+}
+.page__about.--watcher-view::before {
+  width: 100%;
 }
 .page__title {
   flex: 0 1 15.25rem;
@@ -256,50 +260,51 @@ body {
   width: 100%;
   height: 0.9375rem;
   background: #ffffff;
-  border: 0.125rem solid #000000;
+  border: 0.10625rem solid #000000;
 }
 .prog__progress::before {
   content: "";
   display: block;
   width: 0%;
   height: 100%;
-  background: #000653;
+  background: linear-gradient(90deg, #000653, #001a8b, #00297a);
   top: 0;
   left: 0;
+  transition: width 1s ease-in-out;
 }
-.prog:nth-child(1) .prog__progress::before {
+.page__about.--watcher-view .prog:nth-child(1) .prog__progress::before {
   content: "";
   width: 80%;
 }
-.prog:nth-child(1) .prog__logo::after {
+.page__about.--watcher-view .prog:nth-child(1) .prog__logo::after {
   background: #9b2900;
 }
-.prog:nth-child(2) .prog__progress::before {
+.page__about.--watcher-view .prog:nth-child(2) .prog__progress::before {
   content: "";
   width: 75%;
 }
-.prog:nth-child(2) .prog__logo::after {
+.page__about.--watcher-view .prog:nth-child(2) .prog__logo::after {
   background: #880338;
 }
-.prog:nth-child(3) .prog__progress::before {
+.page__about.--watcher-view .prog:nth-child(3) .prog__progress::before {
   content: "";
   width: 60%;
 }
-.prog:nth-child(3) .prog__logo::after {
+.page__about.--watcher-view .prog:nth-child(3) .prog__logo::after {
   background: #003561;
 }
-.prog:nth-child(4) .prog__progress::before {
+.page__about.--watcher-view .prog:nth-child(4) .prog__progress::before {
   content: "";
   width: 90%;
 }
-.prog:nth-child(4) .prog__logo::after {
+.page__about.--watcher-view .prog:nth-child(4) .prog__logo::after {
   background: #1d0038;
 }
-.prog:nth-child(5) .prog__progress::before {
+.page__about.--watcher-view .prog:nth-child(5) .prog__progress::before {
   content: "";
   width: 60%;
 }
-.prog:nth-child(5) .prog__logo::after {
+.page__about.--watcher-view .prog:nth-child(5) .prog__logo::after {
   background: #0f2900;
 }
 @media (max-width: 73.125rem){
